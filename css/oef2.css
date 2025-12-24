@@ -1,0 +1,82 @@
+/*  Naam: Axl Berghmans
+*/
+*{
+    font-family: serif;
+    text-align: center;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 3px;
+    table-layout: fixed;
+    width: 700px;
+    margin: auto;
+}
+
+td,
+th {
+    border: 3px solid black;
+    height: 30px;
+}
+
+thead tr:nth-child(1) th:nth-child(1){
+    background-color: #666;
+    color: white;
+    line-height: 30px;
+}
+
+thead tr th h1{
+    animation: slide-in 3s linear 0s infinite alternate;
+}
+
+@keyframes slide-in {
+    from {transform: translateX(-20px);}
+
+    to {transform: translateX(+20px);}
+}
+
+thead h1{
+    margin: 0;
+    font-size: 60px;
+}
+
+thead tr:nth-child(1) th:nth-child(2) {
+    background-color: #666;
+    color: white;
+    font-weight: normal;
+}
+
+tbody tr:nth-child(1) td:nth-child(1) {
+    background-color: #666;
+    color: white;
+    width: 60px;
+}
+
+thead tr:nth-child(2), td:nth-child(3) td:nth-child(4) td:nth-child(5) td:nth-child(6) td:nth-child(7) {
+    background-color: #999;
+}
+
+tbody tr:nth-child(1) td:nth-child(2),
+tbody tr:nth-child(2) td:nth-child(1),
+tbody tr:nth-child(3) td:nth-child(1),
+tbody tr:nth-child(4) td:nth-child(1),
+tbody tr:nth-child(5) td:nth-child(1){
+    background: #999;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(1) td:nth-child(3),
+tbody tr:nth-child(2) td:nth-child(3),
+tbody tr:nth-child(3) td:nth-child(4),
+tbody tr:nth-child(4) td:nth-child(5),
+tbody tr:nth-child(5) td:nth-child(6) {
+    background: #999;
+}
+
+tbody tr:first-child td:nth-child(n+3){
+    font-family: monospace;
+}
+
+tbody tr:not(:first-child) td:nth-child(n+2){
+    font-family: monospace;
+}
